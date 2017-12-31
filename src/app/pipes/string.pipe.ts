@@ -28,7 +28,6 @@ export class StringPipe implements PipeTransform {
           newStr = value.replace(rg, function(toReplace) {
             return toReplace.toUpperCase();
           });
-          // newStr = value.charAt(0).toUpperCase() + value.slice(1);
         }
         break;
 
