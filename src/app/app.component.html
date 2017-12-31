@@ -3,18 +3,52 @@
   <h1>
     Strings Pipe
   </h1>
-  <input type="text" [(ngModel)]='example'>
-  <br><br>
-  <div>
-    <label for="">String: </label> {{ example | string: 'reverse' }}
-    <br><br>
-    <label for="">String: </label> {{ example | string: 'firstCap' }}
-    <br><br>
-    <label for="">String: </label> {{ example | string: 'capAllWords' }}
-    <br><br>
-    <label for="">String: </label> {{ example | string: 'noSpaces' }}
-    <br><br>
-    <label for="">String: </label> {{ example | string: 'truncate': 10 }}
-  </div>
+  <label for="example"> Try it here:
+    <input type="text" name="example" [(ngModel)]='example'>
+  </label>
+  <br>
+  <br>
+  <table>
+    <tr>
+      <th>Option</th>
+      <th>Result</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>
+        <code> string | string : &quot;reverse&quot;</code>
+      </td>
+      <td> {{ example | string: 'reverse' }} </td>
+      <td>Print reverse string</td>
+    </tr>
+    <tr>
+      <td>
+        <code> string | string : &quot;firstCap&quot;</code>
+      </td>
+      <td> {{ example | string: 'firstCap' }} </td>
+      <td>Print only the first letter of the string in capital letter</td>
+    </tr>
+    <tr>
+      <td>
+        <code> string | string : &quot;capAllWords&quot;</code>
+      </td>
+      <td> {{ example | string: 'capAllWords' }} </td>
+      <td>Print all words with capital letter</td>
+    </tr>
+    <tr>
+      <td>
+        <code> string | string : &quot;noSpaces&quot;</code>
+      </td>
+      <td> {{ example | string: 'noSpaces' }} </td>
+      <td>Remove all spaces</td>
+    </tr>
+    <tr>
+      <td>
+        <code> string | string : &quot;truncate&quot; : number </code>
+      </td>
+      <td> {{ example | string: 'truncate' : 10 }} </td>
+      <td>Truncate string after the number we gave in this example is 10</td>
+    </tr>
+  </table>
 </div>
 
