@@ -22,6 +22,16 @@ export class StringPipe implements PipeTransform {
         }
         break;
 
+        case 'sentenceCap':
+        if (value) {
+          const rg = /(^\w{1}|\.\s*\w{1})/gi;
+          newStr = value.replace(rg, function(toReplace) {
+            return toReplace.toUpperCase();
+          });
+          // newStr = value.charAt(0).toUpperCase() + value.slice(1);
+        }
+        break;
+
       case 'capAllWords':
         if (value) {
           newStr = value.replace(/\b\w/g, first => first.toLocaleUpperCase());
